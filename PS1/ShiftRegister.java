@@ -86,5 +86,16 @@ public class ShiftRegister implements ILFShiftRegister {
         // TODO:
         return 0;
     }
+    public static void main(String[] args) {
+        ILFShiftRegister r = new ShiftRegister(5,3);
+        int[] seed = {1,0,0,1,1};
+        int [] tmp = new int [5];
+        r.setSeed(seed);
+        for(int i = 0; i < 5; i = i + 1){
+            tmp[i] = r.generate(4);
+            System.out.println(tmp[i]);
+        }
+
+    }
     }
 
